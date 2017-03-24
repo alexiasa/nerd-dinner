@@ -1,4 +1,4 @@
-# this requires an intermediate msbuild container to compile the .net application!
+# building this container (the basic web one) requires an intermediate msbuild container to compile the .net application!
 # it's basically steps 1 and 2 of the process detailed here: http://blog.alexellis.io/3-steps-to-msbuild-with-docker/
 # The code's in the msbuild-Dockerfile. Build and run that first! Then follow step 2, substituting with the proper project/solution names 
 
