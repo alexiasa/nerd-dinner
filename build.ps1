@@ -6,8 +6,8 @@ $msBuildPath = "$env:windir\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe"
 
 # publish dacpac:
 & $msBuildPath mvc4\NerdDinner.Database\NerdDinner.Database.sqlproj
-Copy-Item mvc4\NerdDinner.Database\bin\Debug\NerdDinner.Database.dacpac docker\db
+Copy-Item mvc4\NerdDinner.Database\bin\Debug\NerdDinner.Database.dacpac docker\db\NerdDinner.dacpac
 
 # build images:
-docker build -t nerd-dinner-web .\docker\web
-docker build -t nerd-dinner-db .\docker\db
+# docker build -t nerd-dinner-web .\docker\web
+# docker build -t nerd-dinner-db .\docker\db

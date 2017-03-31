@@ -1,15 +1,20 @@
-version: '2'
+version: '2.1'
+
 services:
 
   nerd-dinner-db:
-    image: sixeyed/nerd-dinner-db:part2
+    # build:
+      # context: ./db
+    image: nerd-dinner-db:latest
     ports:
       - "1433:1433"
     networks:
-      - nd
+      - nerd-dinner
 
   nerd-dinner-web:
-    image: sixeyed/nerd-dinner-web:part2
+    # build:
+      # context: ./web
+    image: nerd-dinner-web:latest
     ports:
       - "8081:8081"
     env_file:
@@ -18,9 +23,10 @@ services:
     depends_on:
       - nerd-dinner-db
     networks:
-      - nd
+      - nerd-dinner
 
 networks:
-  nd:
+  nerd-dinner:
     external:
       name: nat
+

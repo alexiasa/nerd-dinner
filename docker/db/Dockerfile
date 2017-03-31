@@ -1,12 +1,14 @@
-# escape=`
+# create a database directory before running
 
-FROM microsoft/mssql-server-2016-express-windows
-MAINTAINER Elton Stoneman <elton@sixeyed.com>
+
+# escape= `
+
+FROM microsoft/mssql-server-windows-express
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
 
 EXPOSE 1433
 VOLUME c:\\database
-ENV sa_password N3rdD!Nne720^6
+ENV sa_password S0000_N3rdy
 
 WORKDIR c:\\init
 COPY . .

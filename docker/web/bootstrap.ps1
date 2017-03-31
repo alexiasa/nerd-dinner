@@ -1,4 +1,3 @@
-
 # copy process-level environment variables (from `docker run`) machine-wide
 foreach($key in [System.Environment]::GetEnvironmentVariables('Process').Keys) {
     if ([System.Environment]::GetEnvironmentVariable($key, 'Machine') -eq $null) {
