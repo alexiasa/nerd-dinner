@@ -267,4 +267,4 @@ docker/web/NerdDinner/
 *.jfm
 
 # secrets
-secrets.env
+*.env
